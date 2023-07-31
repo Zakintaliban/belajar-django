@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block content %}
+<h1>Movie List</h1>
+{% if movies %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Genre</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for movie in movies %}
+                    <tr>
+                        <td>{{ movie.title }}</td>
+                        <td>{{ movie.get_genre_display }}</td>
+                        <td>{{ movie.year }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No movies available.</p>
+    {% endif %}
+{% endblock %}
