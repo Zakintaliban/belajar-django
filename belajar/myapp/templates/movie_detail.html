@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ movie.title }}</h1>
+<p>Genre: {{ movie.get_genre_display }}</p>
+<p>Year: {{ movie.year }}</p>
+<a href="{% url 'edit_movie' pk=movie.pk %}">Edit</a> |
+<a href="{% url 'delete_movie' pk=movie.pk %}">Delete</a> |
+<a href="{% url 'movies' %}"><button type="button" class="btn btn-primary">Back to Movies</button></a>
+{% endblock %}
