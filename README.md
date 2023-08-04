@@ -63,6 +63,7 @@ myapp/ # Direktori aplikasi myapp
 ├── __init__.py # File yang menjadikan direktori myapp/ sebagai package Python
 ├── admin.py # File untuk konfigurasi halaman admin Django
 ├── apps.py # File untuk konfigurasi aplikasi myapp
+├── forms.py # Mendefinisikan form yang digunakan dalam aplikasi ini
 ├── models.py # File untuk mendefinisikan model dalam aplikasi myapp
 ├── tests.py # File untuk penulisan test unit aplikasi myapp
 ├── urls.py # File untuk mendefinisikan URL aplikasi myapp
@@ -80,6 +81,10 @@ File `admin.py` digunakan untuk mengkonfigurasi halaman admin Django. Di sini, m
 ## File `apps.py`
 
 File `apps.py` berisi konfigurasi aplikasi `myapp`. Dalam class `MyappConfig`, variabel `name` di-set ke 'myapp' yang merupakan nama aplikasi.
+
+## File `forms.py`
+
+File `forms.py` ini berfungsi untuk mendefinisikan form HTML yang akan ditampilkan di front-end dan bagaimana form tersebut harus memvalidasi data input pengguna. Di sini, Anda mendefinisikan `MovieForm` yang merupakan subclass dari `forms.ModelForm`, yang pada dasarnya adalah cara Django untuk menghasilkan form dari model data yang ada.
 
 ## File `models.py`
 
